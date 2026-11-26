@@ -1,6 +1,6 @@
 # README — Trabalho Final: Água Estilizada
 
-**Aluno(a):** Lucas Bragança Lima dos Santos Alves
+**Nome:** Lucas Bragança Lima dos Santos Alves
 
 **Versão do Unity:** 6000.3.6f1 (Unity 6.3)
 
