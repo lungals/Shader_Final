@@ -25,6 +25,13 @@ Shader "AguaEstilizadaURP"
         _WaveAmplitude ("Amplitude das Ondas", Range(0.0, 0.5)) = 0.12
         _WaveFrequency ("Frequencia das Ondas", Float) = 1.6
         _WaveSpeed ("Velocidade das Ondas", Float) = 2.0
+
+        [Header(Fresnel e Iluminacao)]
+        _FresnelColor ("Cor do Fresnel", Color) = (0.75, 0.95, 1.0, 1)
+        _FresnelPower ("Forca do Fresnel", Range(1.0, 8.0)) = 3.0
+        _SpecularStrength ("Intensidade do Brilho", Range(0.0, 2.0)) = 0.8
+        _SpecularPower ("Tamanho do Brilho", Range(8.0, 128.0)) = 48.0
+
     }
 
     SubShader
@@ -51,6 +58,8 @@ Shader "AguaEstilizadaURP"
             #pragma fragment frag
 
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+            #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
+
 
             TEXTURE2D(_MainTex);
             SAMPLER(sampler_MainTex);
@@ -76,12 +85,19 @@ Shader "AguaEstilizadaURP"
                 float _WaveAmplitude;
                 float _WaveFrequency;
                 float _WaveSpeed;
+                half4 _FresnelColor;
+                half _FresnelPower;
+                half _SpecularStrength;
+                half _SpecularPower;
+
             CBUFFER_END
 
             struct Attributes
             {
                 float4 positionOS : POSITION;
                 float2 uv         : TEXCOORD0;
+                float3 normalOS   : NORMAL;
+
             };
 
             struct Varyings
@@ -90,6 +106,9 @@ Shader "AguaEstilizadaURP"
                 float2 uvMain      : TEXCOORD0;
                 float2 uvFoam      : TEXCOORD1;
                 half   waveHeight  : TEXCOORD2;
+                float3 normalWS    : TEXCOORD3;
+                float3 posWS       : TEXCOORD4;
+
             };
 
             Varyings vert(Attributes IN)
@@ -112,6 +131,9 @@ Shader "AguaEstilizadaURP"
 
                 //Altura da onda
                 OUT.waveHeight = (half)(waveCombined * 0.5 + 0.5);
+                OUT.normalWS = TransformObjectToWorldNormal(IN.normalOS);
+                OUT.posWS = posWS;
+
 
                 return OUT;
             }
@@ -143,6 +165,20 @@ Shader "AguaEstilizadaURP"
                 half foamFactor = smoothstep(_FoamCutoff - _FoamSoftness, _FoamCutoff + _FoamSoftness, foamSignal);
 
                 half3 finalColor = lerp(waterColor, _FoamColor.rgb, foamFactor);
+
+                float3 normalWS = normalize(IN.normalWS);
+                float3 viewDirWS = normalize(GetWorldSpaceViewDir(IN.posWS));
+
+                //Fresnel
+                half fresnel = pow(1.0h - saturate(dot(normalWS, viewDirWS)), _FresnelPower);
+                finalColor = lerp(finalColor, _FresnelColor.rgb, fresnel * 0.6h);
+
+                //Iluminacao
+                Light mainLight = GetMainLight();
+                float3 halfDir = normalize(mainLight.direction + viewDirWS);
+                half spec = pow(saturate(dot(normalWS, halfDir)), _SpecularPower);
+                finalColor += mainLight.color * spec * _SpecularStrength;
+
 
                 //Espuma mais opaca
                 half finalAlpha = saturate(_Opacity + foamFactor * 0.25h);
