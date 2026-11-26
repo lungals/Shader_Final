@@ -39,7 +39,7 @@ Material da água (`M_AguaEstilizada`):
 
 Material da areia (`Sand`) e script das rochas:
 
-![Inspector do material Sand e do script SpawnRochasNoPlay](imagens/inspetor_areia_e_spawn_rochas.png)
+![Inspector do material Sand e do script SpawnRochasNoPlay](https://github.com/lungals/Shader_Final/blob/main/Inspector%20do%20material%20Sand%20e%20do%20script%20SpawnRochasNoPlay.png?raw=true)
 
 ## Créditos e referências
 
