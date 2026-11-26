@@ -12,7 +12,7 @@
 
 ## Gravação de tela do shader
 
-![Vídeo Shader](
+![Vídeo Shader](https://github.com/lungals/Shader_Final/blob/main/V%C3%ADdeo%20Shader.gif?raw=true)
 
 ## Instruções
 
