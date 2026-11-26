@@ -86,7 +86,7 @@ O efeito é composto por camadas, todas calculadas no shader:
 
 **Valores usados no material entregue (`M_AguaEstilizada`):**
 
-![Inspector do material M_AguaEstilizada](imagens/inspetor_material_agua.png)
+![Inspector do material M_AguaEstilizada]([imagens/inspetor_material_agua.png](https://github.com/lungals/Shader_Final/blob/main/Inspetor%20de%20material%20M_AguaEstilizada.png?raw=true))
 
 ---
 
