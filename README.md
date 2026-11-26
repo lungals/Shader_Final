@@ -10,6 +10,10 @@
 
 ---
 
+## Gravação de tela do shader
+
+![Vídeo Shader](
+
 ## Instruções
 
 1. Abra o projeto `Shader_Final` pelo Unity Hub com o editor 6000.3.6f1.
