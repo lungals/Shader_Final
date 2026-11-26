@@ -35,7 +35,7 @@ Os parâmetros ficam expostos no material, então o visual muda sem editar o có
 
 Material da água (`M_AguaEstilizada`):
 
-![Inspector do material M_AguaEstilizada](imagens/inspetor_material_agua.png)
+![Inspector do material M_AguaEstilizada](https://github.com/lungals/Shader_Final/blob/main/Inspetor%20de%20material%20M_AguaEstilizada.png?raw=true)
 
 Material da areia (`Sand`) e script das rochas:
 
