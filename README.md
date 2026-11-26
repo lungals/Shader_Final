@@ -1,4 +1,4 @@
-# README — Trabalho Final: Água Estilizada (Shader no Unity)
+# README — Trabalho Final: Água Estilizada
 
 **Aluno(a):** Lucas Bragança Lima dos Santos Alves
 
