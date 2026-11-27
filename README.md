@@ -10,10 +10,6 @@
 
 ---
 
-## Gravação de tela do shader
-
-![Vídeo Shader](https://github.com/lungals/Shader_Final/blob/main/V%C3%ADdeo%20Shader.gif?raw=true)
-
 ## Instruções
 
 1. Abra o projeto `Shader_Final` pelo Unity Hub com o editor 6000.3.6f1.
@@ -39,7 +35,7 @@ Os parâmetros ficam expostos no material, então o visual muda sem editar o có
 
 Material da água (`M_AguaEstilizada`):
 
-![Inspector do material M_AguaEstilizada](https://github.com/lungals/Shader_Final/blob/main/Inspetor%20de%20material%20M_AguaEstilizada.png?raw=true)
+![Inspector do material M_AguaEstilizada](https://github.com/lungals/Shader_Final/blob/main/Tela%20inspector%20material%20%C3%A1gua.png?raw=true)
 
 Material da areia (`Sand`) e script das rochas:
 
@@ -48,6 +44,7 @@ Material da areia (`Sand`) e script das rochas:
 ## Créditos e referências
 
 - **Texturas da água** (`T_Agua_Causticas.png` e `T_Agua_MascaraEspuma.png`): geradas com o Gemini (Google).
+- **Peixes** "Fish Alive Free Samples": [Unity Asset Store](https://assetstore.unity.com/packages/3d/characters/animals/fish/fish-alive-free-samples-362806)
 - **Material da areia** "Rippled Wet Sand": [Poliigon](https://www.poliigon.com/texture/rippled-wet-sand-texture/6997)
 - **Rochas** "Free Pack Rocks Stylized": [Unity Asset Store](https://assetstore.unity.com/packages/3d/environments/free-pack-rocks-stylized-316250)
 - **Documentação consultada:** Unity (ShaderLab, Built-in shader variables, URP: writing shaders), Microsoft HLSL reference e o guia da atividade.
