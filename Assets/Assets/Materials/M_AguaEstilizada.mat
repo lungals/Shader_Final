@@ -101,15 +101,15 @@ Material:
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
-    - _FoamCutoff: 0.518
-    - _FoamSoftness: 0.047
+    - _FoamCutoff: 0.785
+    - _FoamSoftness: 0.306
     - _FresnelPower: 1.5
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Metallic: 0
     - _OcclusionStrength: 1
-    - _Opacity: 0.87
+    - _Opacity: 0.875
     - _Parallax: 0.005
     - _QueueOffset: 0
     - _ReceiveShadows: 1
@@ -117,14 +117,14 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SpecularPower: 48
-    - _SpecularStrength: 0.8
+    - _SpecularStrength: 1.22
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
-    - _UVDistortion: 0.1159
-    - _WaveAmplitude: 0.308
-    - _WaveCrestFoam: 0.28
-    - _WaveFrequency: 1.6
+    - _UVDistortion: 0.1073
+    - _WaveAmplitude: 0.491
+    - _WaveCrestFoam: 0.356
+    - _WaveFrequency: 1
     - _WaveSpeed: 2
     - _WorkflowMode: 1
     - _XRMotionVectorsPass: 1
@@ -139,7 +139,7 @@ Material:
     - _FresnelColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
     - _ShallowColor: {r: 0.37647057, g: 0.8147266, b: 1, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _UVSpeed1: {r: 0.08, g: 0.05, b: 0, a: 0}
+    - _UVSpeed1: {r: 0.06, g: 0, b: 0, a: 0}
     - _UVSpeed2: {r: -0.06, g: 0.04, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
