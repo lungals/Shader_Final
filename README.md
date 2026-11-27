@@ -51,4 +51,4 @@ Material da areia (`Sand`) e script das rochas:
 - **Material da areia** "Rippled Wet Sand": [Poliigon](https://www.poliigon.com/texture/rippled-wet-sand-texture/6997)
 - **Rochas** "Free Pack Rocks Stylized": [Unity Asset Store](https://assetstore.unity.com/packages/3d/environments/free-pack-rocks-stylized-316250)
 - **Documentação consultada:** Unity (ShaderLab, Built-in shader variables, URP: writing shaders), Microsoft HLSL reference e o guia da atividade.
-- **Código:** shader e scripts escritos por mim, a partir do exemplo do guia. `[AJUSTE se usou apoio de tutoriais ou IA no código]`
+- **Código:** shader e scripts escritos por mim, a partir do exemplo do guia.
